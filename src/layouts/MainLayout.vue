@@ -11,9 +11,9 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title> Quasar App </q-toolbar-title>
+        <q-toolbar-title>KeshFlow </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <div>KF v1.0.0</div>
       </q-toolbar>
     </q-header>
 

@@ -1,14 +1,14 @@
 <template>
   <q-page class="flex flex-center">
     <div class="column items-center">
-      <img
-        alt="Quasar logo"
-        src="~@/assets/quasar-logo-vertical.svg"
-        style="width: 200px; height: 200px"
-      />
+      <div class="column items-center">
+        <div class="col self-center text-h2 text-center"
+          >Welcome to KeshFlowApp
+        </div>
+      </div>
 
       <q-btn
-        class="q-mt-md"
+        class="q-mt-xl q-mb-xl"
         color="primary"
         to="/second"
         label="Go to Second Page"

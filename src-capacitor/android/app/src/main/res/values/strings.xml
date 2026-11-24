@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Aplicativo de gestao financeira pessoal</string>
+    <string name="title_activity_main">Aplicativo de gestao financeira pessoal</string>
+    <string name="package_name">org.keshflow.app</string>
+    <string name="custom_url_scheme">org.keshflow.app</string>
+</resources>

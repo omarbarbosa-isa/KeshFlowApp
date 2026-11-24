@@ -1,15 +1,40 @@
 const routes = [
   {
     path: '/',
-    component: () => import('@/layouts/MainLayout.vue'),
+    name: 'launch',
+    component: () => import('@/pages/LaunchPage.vue'),
+    meta: { guestOnly: true }
+  },
+  {
+    path: '/',
+    component: () => import('@/layouts/AuthLayout.vue'),
     children: [
-      { path: '', component: () => import('@/pages/IndexPage.vue') },
-      { path: 'second', component: () => import('@/pages/SecondPage.vue') }
+      {
+        path: 'login',
+        name: 'login',
+        component: () => import('@/pages/LoginPage.vue'),
+        meta: { guestOnly: true, title: 'Bem-vindo' }
+      },
+      {
+        path: 'register',
+        name: 'register',
+        component: () => import('@/pages/RegisterPage.vue'),
+        meta: { guestOnly: true, title: 'Criar Conta' }
+      },
+      {
+        path: 'forgot-password',
+        name: 'forgot-password',
+        component: () => import('@/pages/ForgotPasswordPage.vue'),
+        meta: { guestOnly: true, title: 'Recuperar Palavra-passe' }
+      }
     ]
   },
-
-  // Always leave this as last one,
-  // but you can also remove it
+  {
+    path: '/dashboard',
+    name: 'dashboard',
+    component: () => import('@/pages/DashboardPage.vue'),
+    meta: { requiresAuth: true }
+  },
   {
     path: '/:catchAll(.*)*',
     component: () => import('@/pages/ErrorNotFound.vue')
